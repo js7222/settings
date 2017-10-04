@@ -20,13 +20,7 @@
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 
 ; Add cmake listfile names to the mode list.
-(setq auto-mode-alist
-	  (append
-	   '(("CMakeLists\\.txt\\'" . cmake-mode))
-	   '(("\\.cmake\\'" . cmake-mode))
-	   auto-mode-alist))
-(load-file "/usr/local/share/cmake-3.1/editors/emacs/cmake-mode.el")
-(autoload 'cmake-mode "/usr/local/share/cmake-3.1/editors/emacs/cmake-mode.el" t)
+
 (add-to-list 'auto-mode-alist '("\\.h\\'" . c++-mode))
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -52,5 +46,5 @@
 (add-to-list 'auto-mode-alist '("\\.markdown\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 
-(add-to-list 'load-path "~/julia/contrib/")
-(require 'julia-mode)
+(require 'package)
+(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
